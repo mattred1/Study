@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Learning forms</title>
+    <style type="text/css">
+      body {
+        font-family:helvetica;
+      }
+    </style>
+  </head>
+  <body>
+<h1>Register</h1>
+<form>
+<!-- start line 1 -->
+<div>
+    <label for="first">First Name: </label>
+    <input name="first" placeholder="John" type="text" id="first" required>
+
+    <label for="last">Last Name: </label>
+    <input name="last" placeholder="Smith" type="text" id="last" required>
+
+</div>
+<!-- end line 1 -->
+<!-- start line 2 -->
+<div>
+<label for="radio">Male</label>
+<input type="radio" name="gender" id="male" value="male">
+
+<label for="radio">Female</label>
+<input type="radio" name="gender" id="female" value="female">
+
+<label for="radio">Other</label>
+<input type="radio" name="gender" id="other" value="other">
+</div>
+<!-- end line 2 -->
+<!-- start line 3 -->
+<div>
+<label for="email">Email: </label>
+<input placeholder="your email" name="email" type="email" id="email" required>
+
+<label for="password">Pasword: </label>
+<input pattern=".{5,10}" title="Password must be between 5 and 10 characters" placeholder="your password" name="password" type="password" id="password" required>
+<!-- current pattern says must have 5-10 characters. If I wanted to do "must be at least 3 characters" I could do pattern=".{3,}." Title is error messaged displayed if password doesn't meet the pattern criteria -->
+</div>
+<!-- end line 3 -->
+<!-- start line 4 -->
+<div>
+<label for="birthday">Birthday:</label>
+<select name="month" required>
+  <!-- Adding value attribute isn't necessary if you don't want to mask the data you're sending -->
+  <option value="month">Month</option>
+  <option value="january">January</option>
+  <option value="february">February</option>
+  <option value="march">March</option>
+  <option value="april">April</option>
+  <option value="may">May</option>
+  <option value="june">June</option>
+  <option value="july">July</option>
+  <option value="august">August</option>
+  <option value="september">September</option>
+  <option value="october">October</option>
+  <option value="november">November</option>
+  <option value="december">December</option>
+</select>
+<select name="day" required>
+  <option value="day">Day</option>
+  <option value="1">1</option>
+  <option value="2">2</option>
+  <option value="3">3</option>
+  <option value="4">4</option>
+  <option value="5">5</option>
+  <option value="6">6</option>
+  <option value="7">7</option>
+  <option value="8">8</option>
+  <option value="9">9</option>
+  <option value="10">10</option>
+  <option value="11">11</option>
+  <option value="12">12</option>
+  <option value="13">13</option>
+  <option value="14">14</option>
+  <option value="15">15</option>
+  <option value="16">16</option>
+  <option value="17">17</option>
+  <option value="18">18</option>
+  <option value="19">19</option>
+  <option value="20">20</option>
+  <option value="21">21</option>
+  <option value="22">22</option>
+  <option value="23">23</option>
+  <option value="24">24</option>
+  <option value="25">25</option>
+  <option value="26">26</option>
+  <option value="27">27</option>
+  <option value="28">28</option>
+  <option value="29">29</option>
+  <option value="30">30</option>
+  <option value="31">31</option>
+</select>
+<select name="year">
+  <option value="year">Year</option>
+  <option value="2000">2000</option>
+  <option value="2001">2001</option>
+  <option value="2002">2002</option>
+  <option value="2003">2003</option>
+  <option value="2004">2004</option>
+  <option value="2005">2005</option>
+</select>
+</div>
+<!-- end line 4 -->
+<!-- start line 5 -->
+<div>
+<label for="agreed">I agree to the terms and conditions</label>
+<input type="checkbox" name="agreed" value="Agreed" required>
+</div>
+
+<!-- start line 6 -->
+<div>
+<input type="submit" value="Submit">
+</div>
+<!-- end line 6 -->
+</form>
+
+
+
+
+
+
+
+
+
+  </body>
+</html>
