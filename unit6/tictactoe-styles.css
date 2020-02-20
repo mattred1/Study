@@ -15,7 +15,7 @@ td {
 }
 
 
-
+/* Method 1 */
 td:nth-of-type(2) {
     border-left: 1px solid #000000;
     border-right: 1px solid #000000;
@@ -30,7 +30,7 @@ tr:nth-of-type(2) td {
 
 
 
-
+/* Method 2 */
 /* tr  td:nth-of-type(2) {
     border-left: 1px solid #000000;
 }
