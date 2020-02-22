@@ -4,6 +4,21 @@ img {
     height: 90%;
 }
 
+p {
+    font-family:simonetta;
+    font-weight:900;
+    font-size: 2em;
+    margin-bottom: 1em;
+    text-transform: uppercase;
+}
+
+
+
+
+
+
+
+
 
 
 /* Media queries */
@@ -14,7 +29,7 @@ img {
     height: 45%;
     float: left;
   }
-
+}
 
   @media (min-width: 1200px) {
   img {
@@ -23,3 +38,4 @@ img {
     height: 30%;
     float: left;
   }
+}
