@@ -1,6 +1,25 @@
 img {
+    margin: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+
+
+/* Media queries */
+@media (min-width: 600px) {
+  img {
+    margin: 2.5%;
+    width: 45%;
+    height: 45%;
+    float: left;
+  }
+
+
+  @media (min-width: 1200px) {
+  img {
     margin: 1.66%;
     width: 30%;
     height: 30%;
     float: left;
-}
+  }
