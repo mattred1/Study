@@ -11,6 +11,9 @@ p {
     margin-bottom: 1em;
     text-transform: uppercase;
     margin: 5%;
+    border-bottom: 2px solid #e0e0e0;
+    padding-bottom: 10px;
+    width: 50%;
 }
 
 
@@ -48,5 +51,7 @@ p {
 
 p {
     margin: 1.66%;
+    width: 30%;
+
 }
 }
