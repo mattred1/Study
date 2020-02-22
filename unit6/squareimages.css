@@ -10,6 +10,7 @@ p {
     font-size: 2em;
     margin-bottom: 1em;
     text-transform: uppercase;
+    margin: 5%;
 }
 
 
@@ -29,6 +30,12 @@ p {
     height: 45%;
     float: left;
   }
+
+p {
+    margin: 2.5%;
+}
+
+
 }
 
   @media (min-width: 1200px) {
@@ -38,4 +45,8 @@ p {
     height: 30%;
     float: left;
   }
+
+p {
+    margin: 1.66%;
+}
 }
