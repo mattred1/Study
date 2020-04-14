@@ -11,14 +11,14 @@ for(var i = -10; i < 20; i++) {
 
 // Print all even numbers between 10 and 40
 // method #1
-// for (var i = 10; i < 40; i += 2) {
+// for (var i = 10; i <= 40; i += 2) {
 //     console.log(i);
 // }
 // end method #1
  
 // method #2:  actually only pulls even numbers wrapped in the if statement
-// for (var i = 10; i < 40; i += 1) {
-//     if(i % 2 ===0) {
+// for (var i = 10; i <= 40; i += 1) {
+//     if(i % 2 === 0) {
 //         console.log(i);
 //     }
 // }
