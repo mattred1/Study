@@ -19,12 +19,14 @@ while (input !== "quit") {                                              // as lo
     } else if (input === "new") {
         var newTodo = prompt("Enter new todo");        // if input is equal to new, add new todo to end of array (push)
         todos.push(newTodo);
+        console.log("Added Todo!");
     } else if (input === "delete") {
         // ask for index of todo to be deleted
         var index = prompt("Enter index of todo to delete");
         
         // delete that todo
         todos.splice(index,1);                                                     //remove index that user provides (index is what i chose to call it for ease). after comma is number of elements to delete
+        console.log("Deleted Todo!");
     }
 
     //ask again for new input
