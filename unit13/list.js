@@ -13,9 +13,7 @@ while (input !== "quit") {                                              // as lo
     if (input === "list") {
         listTodos();
     } else if (input === "new") {
-        var newTodo = prompt("Enter new todo");        // if input is equal to new, add new todo to end of array (push)
-        todos.push(newTodo);
-        console.log("Added Todo!");
+        addTodo();
     } else if (input === "delete") {
         // ask for index of todo to be deleted
         var index = prompt("Enter index of todo to delete");
@@ -44,6 +42,12 @@ function listTodos() {
     console.log("**********")
 }
 
+
+function addTodo() {
+    var newTodo = prompt("Enter new todo");        // if input is equal to new, add new todo to end of array (push)
+    todos.push(newTodo);
+    console.log("Added Todo!");
+}
 
 
 
