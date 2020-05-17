@@ -15,7 +15,7 @@ console.log("Connected!");
 
 
 
-
+/*
     function isUniform(arr) {
         var first = arr[0];
         for (var i = 1; i < arr.length; i++) {                                                                // we can use i=1 instead of i=0 because we don't need to compare i to the first element, we can skip to comparing it to the second element. Because of i++, it'll go through each element in the array and compare it to the first element.
@@ -25,6 +25,22 @@ console.log("Connected!");
         }
         return true;
     }
+*/
+
+
+
+function sumArray(arr) {
+    var total = 0;                                                                                         // need to make a variable to hold the total, then we need to loop through the whole array, in this case using forEach
+    arr.forEach(function(element) {
+        total += element;                                                                            // adds total to each element, and, because it's forEach, it does it for each element
+    });
+    return total;
+}
+
+
+
+
+
 
 
 
