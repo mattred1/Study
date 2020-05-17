@@ -4,7 +4,7 @@ console.log("Connected!");
 
 
 /*
-********** printReverse() **********
+//********** printReverse() **********
 
     function printReverse(arr) {
         for(var i = arr.length - 1; i >= 0; i--) {                                                                //arr.length will get the length of the array, and we add "-1" because the index is always one less than length
@@ -18,7 +18,7 @@ console.log("Connected!");
 
 
 /*
-********** isUniform() **********
+//********** isUniform() **********
 
 
     function isUniform(arr) {
@@ -34,7 +34,7 @@ console.log("Connected!");
 
 
 /*
-********** sumArray() **********
+//********** sumArray() **********
 
 
 function sumArray(arr) {
@@ -52,8 +52,15 @@ function sumArray(arr) {
 
 // ********** max() **********
 
-
-
+function max(arr) {
+    var max = arr[0];                                                                            // create variable to hold the manimum number
+    for (var i = 1; i < arr.length; i++) {                                                 // don't need to use i=0 because we dont' need to compare the first element to the first element
+        if (arr[i] > max) {
+            max = arr[i];
+        }
+    }
+    return max;
+}
 
 
 
