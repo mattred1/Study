@@ -16,7 +16,15 @@ console.log("Connected!");
 
 
 
-
+    function isUniform(arr) {
+        var first = arr[0];
+        for (var i = 1; i < arr.length; i++) {                                                                // we can use i=1 instead of i=0 because we don't need to compare i to the first element, we can skip to comparing it to the second element. Because of i++, it'll go through each element in the array and compare it to the first element.
+            if (arr[i] !== first) {
+                return false;
+            }
+        }
+        return true;
+    }
 
 
 
