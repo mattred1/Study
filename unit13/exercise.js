@@ -1,4 +1,4 @@
-window.setTimeout(function () {
+console.log("Connected!");
 
 
 
@@ -30,23 +30,3 @@ window.setTimeout(function () {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-}, 500);
