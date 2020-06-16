@@ -28,4 +28,3 @@ movies.forEach(function(movie) {
     console.log(result);
 });
 
-// We can concatenate the above a bit...
