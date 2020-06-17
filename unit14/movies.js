@@ -28,3 +28,29 @@ movies.forEach(function(movie) {
     console.log(result);
 });
 
+
+
+
+
+
+
+// Refactored version - cleans up by putting everything into a function and then calls function. buildString will run each movie. line 52 will be replaced by whatever result for a given movie
+// Creating function
+/*
+function buildString(movie) {
+   var result = "You have ";
+   if (movie.hasWatched) {
+       result += "seen ";
+   }
+   else {
+       result += "not seen ";
+   }
+    result += "\"" + movie.title + "\"" + " - " + movie.rating + " stars";
+   return result;
+};
+
+// Calling function
+movies.forEach (function(movie) {
+    console.log(builtString(movie));
+});
+*/
