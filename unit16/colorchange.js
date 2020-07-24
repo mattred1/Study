@@ -1,1 +1,5 @@
-alert("Hey there");
+var button = document.querySelector("button");
+
+button.addEventListener("click", function() {
+    document.body.style.background = "blue";
+});
