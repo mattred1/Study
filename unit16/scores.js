@@ -4,7 +4,7 @@ var resetButton = document.getElementById("reset");
 var p1Display = document.getElementById("p1Display"); // need a way to display scores and update as buttons are clicked
 var p2Display = document.getElementById("p2Display");
 var numInput = document.querySelector("input[type='number']"); // don't need to specify that type = number, but doesn't hurt to be specific
-
+var winningScoreDisplay = document.querySelector("p span");
 var p1Score = 0; // scores start at 0 obviously
 var p2Score = 0;
 var gameOver = false;
@@ -47,4 +47,11 @@ resetButton.addEventListener("click", function() {
     p2Display.classList.remove("winner");
     gameOver = false;
 
+});
+
+
+//"Playing to" score. using "change" instead of "click" because click wouldn't run if you input a number using the keyboard - only if you pressed up/down arrow. Change will follow ANY change.
+//set winning score display to equal the value of the input. changes dynamically
+numInput.addEventListener("change", function() {
+    winningScoreDisplay.textContent = numInput.value;
 });
