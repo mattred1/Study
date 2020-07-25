@@ -24,7 +24,7 @@ p1Button.addEventListener("click", function() {
 
 });
 
-
+// handles player 2 button functions
 p2Button.addEventListener("click", function() {
     if(!gameOver) {
         p2Score++;
@@ -37,7 +37,7 @@ p2Button.addEventListener("click", function() {
 
 });
 
-
+// handles reset button
 resetButton.addEventListener("click", function() {
     p1Score = 0;
     p1Display.textContent = p1Score;
