@@ -2,16 +2,25 @@
 <html>
 <head>
 <title>Scorekeeper</title>
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 <link rel="stylesheet" href="scores.css">
 </head>
 <body>
-    <h1><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
-    <p>Playing to: <span>5</span></p>
-    <input type="number">
-    <button id="p1">Player 1</button>
-    <button id="p2">Player 2</button>
-    <button id="reset">Reset</button>
+    <div class="text-center containe mt-5">
+    
+        <h1 class="text-center"><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
 
+        <p class="text-center">What are you playing to?<br><span>5</span></p>
+
+        <div class="form-group mx-auto">
+            <input type="number">
+        </div>
+
+        <button type="button" class="btn btn-outline-primary" id="p1">Player 1</button>
+        <button type="button" class="btn btn-outline-primary" id="p2">Player 2</button>
+        <button type="button" class="btn btn-outline-primary" id="reset">Reset</button>
+
+    </div>  
     <script src="scores.js"></script>
 </body>
 </html>
