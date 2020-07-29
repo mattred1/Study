@@ -4,11 +4,11 @@ var allLis = document.querySelectorAll("li");
 for (var i = 0; i < allLis.length; i++) {
 
     allLis[i].addEventListener("mouseover", function() { // here, this refers to the element that the event was triggered on. Easy reference
-        this.style.color = "green";
+        this.classList.add("selected");
     });
-
+//use classes instead of manipulating styles because it's css' job to do the style heavy lifting
     allLis[i].addEventListener("mouseout", function() {
-        this.style.color = "black";
+        this.classList.remove("selected");
     });
 
     allLis[i].addEventListener("click", function() {
