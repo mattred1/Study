@@ -8,7 +8,13 @@ var colors = [
     "rgb(0, 255, 255)"
 ]
 
+// Selects class square. Needs "." because of type of selector
 var squares = document.querySelectorAll(".square");
+var pickedColor = colors[5];
+var colorDisplay = document.getElementById("colorDisplay");
+
+// Displays color in h1 that was picked (only colors[5] for now)
+colorDisplay.textContent = pickedColor;
 
 // Targets .squares and changes background to equal colors. Loops through array of colors
 for(var i = 0; i < squares.length; i++) {
