@@ -19,6 +19,10 @@ h1 {
     margin: 0 auto;
 }
 
-span {
-    color: #FFFFFF;
+
+#stripe {
+    background-color: #FFFFFF;
+    height: 30px;
+    text-align: center;
+    color: black;
 }
