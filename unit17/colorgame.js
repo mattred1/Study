@@ -11,7 +11,7 @@ var colors = [
 
 // Selects class square. Needs "." because of type of selector
 var squares = document.querySelectorAll(".square");
-var pickedColor = colors[5];
+var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 
@@ -48,6 +48,16 @@ function changeColors(color) {
     for(var i = 0; i < squares.length; i++) {
         squares[i].style.backgroundColor = color;
     };
+}
+
+
+function pickColor() {
+    //math.random generates a number between 0-1. To adjust, we multiply it times 6 (6 random colors available), add 1 (otherwise the highest we could get is 5.999), & lose everything after the decimal. Use math.floor to do that
+    //use colors.length because we want the number to dynamically change (easy mode will display 3 colors instead of 6). Using .length eliminates the need to worry about +1, since length is always 1 greater than the index 
+   var random = Math.floor(Math.random() * colors.length);
+
+   //picks a random number, then returns it from index of var colors
+   return colors[random];
 }
 
 
