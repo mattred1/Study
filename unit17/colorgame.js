@@ -1,12 +1,4 @@
-// Will go back later to randomly pick 3 numbers 0-255 to get random rgb colors
-var colors = [
-    "rgb(255, 0, 0)",
-    "rgb(0, 255, 0)",
-    "rgb(0, 0, 255)",
-    "rgb(255, 255, 0)",
-    "rgb(255, 0, 255)",
-    "rgb(0, 255, 255)"
-]
+var colors = generateRandomColors(6);
 
 
 // Selects class square. Needs "." because of type of selector
@@ -30,7 +22,7 @@ for(var i = 0; i < squares.length; i++) {
     squares[i].addEventListener("click", function() {
         // grab color of picked square
         var clickedColor = this.style.backgroundColor;
-        // compare color to pickedColor
+        // compare color to pickedColor - guesses correctly or incorrectly
         if(clickedColor === pickedColor) {
             messageDisplay.textContent = "Correct!"
             changeColors(clickedColor);
@@ -51,6 +43,7 @@ function changeColors(color) {
 }
 
 
+//Randomly picks winning color
 function pickColor() {
     //math.random generates a number between 0-1. To adjust, we multiply it times 6 (6 random colors available), add 1 (otherwise the highest we could get is 5.999), & lose everything after the decimal. Use math.floor to do that
     //use colors.length because we want the number to dynamically change (easy mode will display 3 colors instead of 6). Using .length eliminates the need to worry about +1, since length is always 1 greater than the index 
@@ -61,3 +54,27 @@ function pickColor() {
 }
 
 
+function generateRandomColors(num) {
+    // make an array
+    var arr = [];
+
+    // repeat num times
+    for(var i = 0; i < num; i++) {
+        // get random color and push into arr
+        arr.push(randomColor());
+    };
+    // return that array   
+    return arr;
+}
+
+
+function randomColor() {
+    // pick red from 0-255
+    var r = Math.floor(Math.random() * 256);
+    // pick green from 0-255
+    var g = Math.floor(Math.random() * 256);
+    // pick blue from 0-255
+    var b = Math.floor(Math.random() * 256);
+    //add all of them together to return a string "rgb(r, g, b)"
+    return "rgb(" + r + ", " + g + ", " + b + ")"       
+}
