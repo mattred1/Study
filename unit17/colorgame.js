@@ -32,9 +32,10 @@ for(var i = 0; i < squares.length; i++) {
         var clickedColor = this.style.backgroundColor;
         // compare color to pickedColor
         if(clickedColor === pickedColor) {
-            alert("correct");
+            alert("CORRECT");
         } else {
-            alert("wrong");
+            this.style.backgroundColor = "#232323";
+
         } 
     });
 
