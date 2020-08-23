@@ -1,4 +1,6 @@
-var colors = generateRandomColors(6);
+//keeps track of number of squares. Stops bug where winning color would be hidden in easy mode
+var numSquares = 6
+var colors = generateRandomColors(numSquares);
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
@@ -8,19 +10,58 @@ var resetButton = document.getElementById("reset");
 var easyBtn = document.querySelector("#easyBtn");
 var hardBtn = document.querySelector("#hardBtn");
 
+
+
+//click on easy button
 easyBtn.addEventListener("click", function() {
+    //if easy btn is selected, unselect hard
     easyBtn.classList.add("selected");
     hardBtn.classList.remove("selected");
+    numSquares = 3
+    //generates 3 random colors
+    colors = generateRandomColors(numSquares);
+    //picks color from those 3 random colors
+    pickedColor = pickColor();
+    //displays that picked color
+    colorDisplay.textContent = pickedColor;
+    //
+    for(var i = 0; i < squares.length; i++) {
+       if(colors[i]) {
+        //    if there is a next color (will only be for the first 3), make the square equal the color
+           squares[i].style.backgroundColor = colors[i];
+       }   else {
+           squares[i].style.display = "none";
+       }
+    }
 })
+
+
+
+
+//click on hard button
 hardBtn.addEventListener("click", function() {
     hardBtn.classList.add("selected");
     easyBtn.classList.remove("selected");
+    numSquares = 3
+    colors = generateRandomColors(numSquares);
+    //picks color from those 3 random colors
+    pickedColor = pickColor();
+    //displays that picked color
+    colorDisplay.textContent = pickedColor;
+    //loops through squares and adds display: block to all
+    for (var i = 0; i < squares.length; i++) {
+        squares[i].style.backgroundColor = colors[i];
+        squares[i].style.display = "block";
+        }
+
 })
+
+
 
 
 resetButton.addEventListener("click", function() {
     //generate all new colors
-    colors = generateRandomColors(6);
+    colors = generateRandomColors(numSquares);
 
     // pick new random color from Array
     pickedColor = pickColor();
