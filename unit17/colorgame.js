@@ -1,12 +1,32 @@
 var colors = generateRandomColors(6);
-
-
-// Selects class square. Needs "." because of type of selector
 var squares = document.querySelectorAll(".square");
 var pickedColor = pickColor();
 var colorDisplay = document.getElementById("colorDisplay");
 var messageDisplay = document.querySelector("#message");
 var h1 = document.querySelector("h1");
+var resetButton = document.getElementById("reset");
+
+
+
+
+resetButton.addEventListener("click", function() {
+    //generate all new colors
+    colors = generateRandomColors(6);
+
+    // pick new random color from Array
+    pickedColor = pickColor();
+
+    //change colorDisplay to match picked color
+    colorDisplay.textContent = pickedColor;
+
+    //change color of squares on page to match randomly generated colors
+    for (var i = 0; i < squares.length; i++) {
+    squares[i].style.backgroundColor = colors[i];
+    }
+    h1.style.backgroundColor = "#232323";
+})
+
+
 
 
 // Displays color in h1 that was picked (only colors[5] for now)
@@ -14,26 +34,35 @@ colorDisplay.textContent = pickedColor;
 
 
 
+
 // Targets .squares and changes background to equal colors. Loops through array of colors
 for(var i = 0; i < squares.length; i++) {
     // Add initial colors to squares
     squares[i].style.backgroundColor = colors[i];
-
     // Add click listeners to squares
     squares[i].addEventListener("click", function() {
         // grab color of picked square
         var clickedColor = this.style.backgroundColor;
         // compare color to pickedColor - guesses correctly or incorrectly
         if(clickedColor === pickedColor) {
+            //display correct if right color is guessed
             messageDisplay.textContent = "Correct!"
+            //changes square colors to equal correct color
             changeColors(clickedColor);
+            //changes square colors to equal correct color
             h1.style.backgroundColor = clickedColor;
+            //Change button text 
+            resetButton.textContent = "Play again?"
         } else {
+            //make clicked wrong square fade away
             this.style.backgroundColor = "#232323";
+            //display message
             messageDisplay.textContent = "Try again"
         } 
     });
 }
+
+
 
 
 //Loop through all the squares to change their color to the correct color
@@ -45,6 +74,8 @@ function changeColors(color) {
 }
 
 
+
+
 //Randomly picks winning color
 function pickColor() {
     //math.random generates a number between 0-1. To adjust, we multiply it times 6 (6 random colors available), add 1 (otherwise the highest we could get is 5.999), & lose everything after the decimal. Use math.floor to do that
@@ -54,6 +85,8 @@ function pickColor() {
    //picks a random number, then returns it from index of var colors
    return colors[random];
 }
+
+
 
 
 function generateRandomColors(num) {
@@ -68,6 +101,8 @@ function generateRandomColors(num) {
     // return that array   
     return arr;
 }
+
+
 
 
 function randomColor() {
