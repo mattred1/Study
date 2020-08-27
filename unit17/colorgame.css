@@ -32,7 +32,6 @@ h1 {
     margin: 0 auto;
 }
 
-
 #stripe {
     background-color: #FFFFFF;
     height: 30px;
@@ -42,4 +41,14 @@ h1 {
 
 .selected {
     background-color: steelblue;
+}
+
+button {
+    border: none;
+    background: none;
+    text-transform: uppercase;
+    height: 100%;
+    font-weight: 600;
+    color: steelblue;
+    font-size: inherit;
 }
