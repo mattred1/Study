@@ -12,6 +12,8 @@ body {
 
 h1 {
     color: #FFFFFF;
+    text-align: center;
+    background-color: steelblue;
 }
 
 #container {
@@ -28,5 +30,5 @@ h1 {
 }
 
 .selected {
-    background-color: blue;
+    background-color: steelblue;
 }
