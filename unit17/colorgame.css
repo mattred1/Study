@@ -46,6 +46,7 @@ h1 {
 
 .selected {
     background-color: steelblue;
+    color: white;
 }
 
 button {
@@ -56,4 +57,10 @@ button {
     font-weight: 600;
     color: steelblue;
     font-size: inherit;
+    transition: all .4s;
+}
+
+button:hover {
+    color: white;
+    background: steelblue;
 }
