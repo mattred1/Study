@@ -1,6 +1,7 @@
 body {
     background-color: #232323;
     margin: 0;
+    font-family: "Verdana", "Geneva", Sans-Serif;
 }
 
 .square {
@@ -16,6 +17,8 @@ h1 {
     text-align: center;
     background-color: steelblue;
     margin: 0;
+    font-weight: normal;
+    text-transform: uppercase;
 }
 
 #container {
