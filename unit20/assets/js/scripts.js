@@ -17,7 +17,7 @@ $("ul").on("click", "span", function(event) {
 
 
 
-
+// Append input value as a new list item and add trash can
 $("input[type='text'").keypress(function(e) {
     if(e.which === 13) { 
         //grab new todo from text input
@@ -31,3 +31,9 @@ $("input[type='text'").keypress(function(e) {
 // Notes:
 // enter is character key 13, which is why we used "=== 13"
 //event is named e in this case, but I could name it whatever I want
+
+
+
+$(".fa-plus").click(function() {
+    $("input[type='text'").fadeToggle();
+});
