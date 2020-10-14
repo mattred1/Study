@@ -1,5 +1,5 @@
 // Click li to gray out/crossoff
-$("li").click(function() {
+$("ul").on("click", "li", function() {
     $(this).toggleClass("completed");
 });
 
