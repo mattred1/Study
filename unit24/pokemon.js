@@ -1,5 +1,13 @@
+// Variables
 const container = document.querySelector('#container');
-const newImg = document.createElement('img');
+const baseURL = 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/'
 
-newImg.src= 'https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/dream-world/1.svg';
-container.appendChild(newImg);
+
+// Create new image inside of #container
+
+for (let i = 1; i < 152; i++) {
+    const newImg = document.createElement('img');
+    newImg.src= `${baseURL}${i}.svg`;
+    container.appendChild(newImg);
+
+}
