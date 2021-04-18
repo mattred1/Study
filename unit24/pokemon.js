@@ -10,6 +10,7 @@ for (let i = 1; i < 152; i++) {
     const label = document.createElement('span');
     label.innerText = `#${i}`
     const newImg = document.createElement('img');
+    pokemon.classList.add('pokemon');
     newImg.src= `${baseURL}${i}.svg`;
     pokemon.appendChild(newImg);
     pokemon.appendChild(label);
