@@ -4,10 +4,13 @@ const tweetContainer = document.querySelector('#tweets');
 tweetForm.addEventListener('submit', function(e) {
 	e.preventDefault(); 
 
-    const username = tweetForm.elements.username.value
-	const tweet = tweetForm.elements.tweet.value
+    const usernameInput = tweetForm.elements.username
+	const tweetInput = tweetForm.elements.tweet
 
-    addTweet(username, tweet);
+    addTweet(usernameInput.value, tweetInput.value);
+
+    usernameInput.value = '';
+    tweetInput.value = '';
 
 })
 
