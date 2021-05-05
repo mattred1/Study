@@ -16,3 +16,10 @@ input, button {
     font-size: 1.25em;
     border-radius: 25px;
 }
+
+@media (max-width:600px) {
+    body, input, button {
+        font-size: 1em;
+    }
+
+}
