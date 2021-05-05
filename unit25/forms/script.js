@@ -7,7 +7,13 @@ tweetForm.addEventListener('submit', function(e) {
     const usernameInput = tweetForm.elements.username
 	const tweetInput = tweetForm.elements.tweet
 
-    addTweet(usernameInput.value, tweetInput.value);
+    if (tweetInput.value !== '' && usernameInput.value !== '') {
+        addTweet(usernameInput.value, tweetInput.value);
+    } else {
+        alert('Fill in both inputs ya silly')
+    }
+
+    
 
     usernameInput.value = '';
     tweetInput.value = '';
