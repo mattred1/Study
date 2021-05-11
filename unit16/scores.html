@@ -10,14 +10,23 @@
     
         <h1 class="text-center display-1"><span id="p1Display">0</span> to <span id="p2Display">0</span></h1>
 
-        <p class="text-center lead">What are you playing to?<br><span>5</span></p>
+        <p class="text-center lead">Playing to <span>5</span></p>
 
         <div class="form-group mx-auto">
-            <input type="number">
+            <label for="numbers">Playing to </label>
+            <select name="numbers" id="numbers">
+              <option value="5">5</option>
+              <option value="6">6</option>
+              <option value="7">7</option>
+              <option value="8">8</option>
+              <option value="9">9</option>
+              <option value="10">10</option>
+            </select>
+          
         </div>
 
-        <button type="button" class="btn btn-lg btn-outline-primary" id="p1">Player 1</button>
-        <button type="button" class="btn btn-lg btn-outline-primary" id="p2">Player 2</button>
+        <button type="button" class="btn btn-lg btn-outline-primary" id="p1">+1 Player One</button>
+        <button type="button" class="btn btn-lg btn-outline-primary" id="p2">+1 Player Two</button>
         <button type="button" class="btn btn-lg btn-outline-primary" id="reset">Reset</button>
 
     </div>  
