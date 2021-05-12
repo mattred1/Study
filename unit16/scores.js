@@ -53,10 +53,8 @@ function reset() {
     p1.display.textContent = p1.score;
     p2.score = 0;
     p2.display.textContent = p2.score;
-    p1.display.classList.remove("winner");
-    p2.display.classList.remove("winner");
-    p1.display.classList.remove("loser");
-    p2.display.classList.remove("loser");
+    p1.display.classList.remove("winner", "loser");
+    p2.display.classList.remove("winner", "loser");
     gameOver = false;
 }
 
