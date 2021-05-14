@@ -22,9 +22,11 @@ p1.button.addEventListener("click", function() {
     if (!gameOver){
         p1.score++; // update score
         if(p1.score === winningScore) { // once p1.score ==== 5, gameOver becomes set to true, and this whole function is an if statement for if it's NOT game over
-            p1.display.classList.add("winner");
+            p1.display.classList.add("has-text-success");
             gameOver = true;
-            p2.display.classList.add("loser")
+            p2.display.classList.add("has-text-danger")
+            p1.button.disabled = true;
+            p2.button.disabled = true;
         }
         p1.display.textContent = p1.score; // then display the value of the score
     }
@@ -37,9 +39,11 @@ p2.button.addEventListener("click", function() {
     if(!gameOver) {
         p2.score++;
         if (p2.score === winningScore){
-            p2.display.classList.add("winner");
+            p2.display.classList.add("has-text-success");
             gameOver = true;
-            p1.display.classList.add("loser")
+            p1.display.classList.add("has-text-danger")
+            p1.button.disabled = true;
+            p2.button.disabled = true;
         }
         p2.display.textContent = p2.score;
     }
@@ -53,9 +57,12 @@ function reset() {
     p1.display.textContent = p1.score;
     p2.score = 0;
     p2.display.textContent = p2.score;
-    p1.display.classList.remove("winner", "loser");
-    p2.display.classList.remove("winner", "loser");
+    p1.display.classList.remove("has-text-success", "has-text-danger");
+    p2.display.classList.remove("has-text-success", "has-text-danger");
     gameOver = false;
+    p1.button.disabled = false;
+    p2.button.disabled = false;
+
 }
 
 
