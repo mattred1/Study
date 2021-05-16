@@ -16,57 +16,60 @@ let gameOver = false;
 let winningScore = 5;
 
 
+function updateScore(player,opponent) {
+    if (!gameOver){
+        player.score++; // update score
+        if(player.score === winningScore) { // once p1.score ==== 5, gameOver becomes set to true, and this whole function is an if statement for if it's NOT game over
+            player.display.classList.add("has-text-success");
+            gameOver = true;
+            opponent.display.classList.add("has-text-danger")
+            player.button.disabled = true;
+            opponent.button.disabled = true;
+        }
+        player.display.textContent = player.score; // then display the value of the score
+    }
+
+};
+
 
 // selects player one button and incrementally updates score as button is clicked, then displays it
 p1.button.addEventListener("click", function() {
-    if (!gameOver){
-        p1.score++; // update score
-        if(p1.score === winningScore) { // once p1.score ==== 5, gameOver becomes set to true, and this whole function is an if statement for if it's NOT game over
-            p1.display.classList.add("has-text-success");
-            gameOver = true;
-            p2.display.classList.add("has-text-danger")
-            p1.button.disabled = true;
-            p2.button.disabled = true;
-        }
-        p1.display.textContent = p1.score; // then display the value of the score
-    }
-
+    updateScore(p1, p2)
 });
 
 
 // handles player 2 button functions
 p2.button.addEventListener("click", function() {
-    if(!gameOver) {
-        p2.score++;
-        if (p2.score === winningScore){
-            p2.display.classList.add("has-text-success");
-            gameOver = true;
-            p1.display.classList.add("has-text-danger")
-            p1.button.disabled = true;
-            p2.button.disabled = true;
-        }
-        p2.display.textContent = p2.score;
-    }
-
+    updateScore(p2, p1)
 });
 
-
-//Create new function for refactor
 function reset() {
-    p1.score = 0;
-    p1.display.textContent = p1.score;
-    p2.score = 0;
-    p2.display.textContent = p2.score;
-    p1.display.classList.remove("has-text-success", "has-text-danger");
-    p2.display.classList.remove("has-text-success", "has-text-danger");
     gameOver = false;
-    p1.button.disabled = false;
-    p2.button.disabled = false;
-
+    
+    for (const p of [p1,p2]) {
+        p.score = 0;
+        p.display.textContent = p.score;
+        p.display.classList.remove("has-text-success", "has-text-danger");
+        p.button.disabled = false;
+    }
 }
 
 
-// handles reset button
+//pre-refactored reset. Not  necessary, but would help if add additional players
+// function reset() {
+//     p1.score = 0;
+//     p1.display.textContent = p1.score;
+//     p2.score = 0;
+//     p2.display.textContent = p2.score;
+//     p1.display.classList.remove("has-text-success", "has-text-danger");
+//     p2.display.classList.remove("has-text-success", "has-text-danger");
+//     gameOver = false;
+//     p1.button.disabled = false;
+//     p2.button.disabled = false;
+
+// }
+
+
 resetButton.addEventListener("click", function() {
     reset();
 });
